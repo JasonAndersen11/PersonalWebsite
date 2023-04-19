@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+   
+}
+
+/* Configure Small Layout */
+
+
+body {
+    background-color: #89CFF0;
+    color: #141414;
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+}
+
+
+header{
+    background-color: #ffff;
+    background-image: url(images/logo.jpg);
+    background-repeat: no-repeat;
+    color: #231814;
+    padding-left: 105px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+   
+   
+}
+header a {
+    text-decoration: none;
+}
+
+header a:link {
+    color: #231814;
+}
+
+header a:visited {
+    color: #231814;
+}
+header a:hover {
+    color: #141414;
+
+}
+
+header a:hover {
+    color: #141414
+
+}
+
+
+
+footer {
+    background-color: #ffff;
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 1em;
+    border-top: 2px solid #26308c;
+}
+
+#wrapper {
+    background-color: #89CFF0;
+    padding: 0;
+
+}
+
+nav {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'Bayon' , sans-serif;
+
+}
+
+h2 {
+    color: #141414;
+}
+
+h3,
+dt {
+    color: #141414;
+}
+
+h4 {
+    background-color: #ffff;
+    font-size: 1.2em;
+    padding-left: .5em;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid #221811;
+    clear: left;
+}
+
+main {
+    background-color: #edece6;
+    display: block;
+    padding: 0 0 2em 0;
+ 
+}
+
+h2, h3, h4, p, div, ul, dl {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.details {
+    padding-left: 20%;
+    padding-right: 20%;
+    overflow: auto;
+}
+
+.floatleft {
+    float: left;
+    padding-right: 2em;
+    padding-bottom: 2em;
+}
+
+.onethird {
+    float: left;
+    width: 33%;
+}
+
+
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+nav a {
+    text-decoration: none;
+}
+nav a:link {
+    color: #141414;
+}
+
+nav a:visited {
+    color: #141414;
+}
+
+nav a:hover {
+    color: #141414;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    border-bottom: 1px solid #FEF6C2;
+    padding: .5em lem;
+    width: 100%;
+}
+
+nav li a {
+    display: flex;
+    flex-direction: column;
+    padding: .5em 1em;
+}
+
+
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+main ul {
+    padding-left: 2em;
+}
+
+.details {
+    padding-left: 20%;
+    padding-right: 20%;
+    overflow: auto;
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    margin: auto;
+    width: 90%;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #D2B48E;
+}
+
+form {
+    display: flex;
+    flex-direction: columnn;
+    padding-left: 1em;
+    width: 80%;
+}
+
+input,
+textarea {
+    margin-bottom: .5em;
+}
+
+/* Configure Medium Layout */
+@media (min-width: 600px) {
+    header {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+h1 {
+    font-size: 3em;
+}
+nav ul {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+nav li {
+    border-bottom: none;
+}
+
+
+nav li a {
+    display: flex;
+    flex-direction: column;
+    padding: .5em 1em;
+}
+
+
+
+
+
+#heromugs {
+    background-image: url(images/heromugs.jpg);
+
+}
+
+#heroguitar {
+    background-image: url(images/jasonavery.JPG);
+}
+
+#Homehero {
+    background-image: url(images/hero.jpg);
+    height: 50vh;
+}
+
+#flow {
+    display: flex;
+    flex-direction: row;
+}
+
+#mobile {
+    display: none;
+}
+
+#desktop {
+    display: inline;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+}
+
+h4 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+form {
+    width: 40%;
+    display: grid;
+    grid-gap: 1em;
+    gap: 1em;
+    grid-template-columns: 6em 1fr;
+}
+
+input[type="submit"] {
+    grid-column: 2 / 3;
+    width: 9em;
+}
+
+
+
+/* Configure Large Layout */
+@media (min-width: 1024px) {
+    @supports (display: grid) {
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: main;
+   
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template:
+                    "header header"
+                    "nav    main"
+                    "footer footer"
+                    / 200px;
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        header {
+            background-image: url(images/jasonavery.JPG);
+        }
+        }
+    }
+}
